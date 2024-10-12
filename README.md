@@ -1,6 +1,9 @@
 # WikiBfs
 *Wikiracing haha goes brrrr*  
-Un proyecto desarrollado con Gradle 7.6 y JVM de Kotlin 1.9.22
+Un proyecto personal para aprender sobre algoritmos de búsqueda, hilos, optimizaciones en Kotlin y git
+Versión de Gradle: 8.8
+Versión de Kotlin: 2.0.0
+Versión de Java JRE: 22
 
 # Descripción
 Esta aplicación permite buscar el camino mínimo entre dos entradas de Wikipedia (actualmente solo disponible en castellano) y si están conectadas entre sí.   
@@ -23,5 +26,6 @@ Asegúrese que los enlaces tienen formato `https://es.wikipedia.org/wiki/[Nombre
 
 # Lista ToDo
 - [ ] Optimizar al máximo el programa
+- [ ] Optimizaciones con multithreading
 - [ ] Aceptar el resto de idiomas de la wikipedia
 - [ ] Publicar en archivo docker
