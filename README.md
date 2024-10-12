@@ -8,7 +8,7 @@ La búsqueda se realiza mediante el algoritmo de Búsqueda en Anchura (BFS) (sin
 
 # Requisitos del Sistema
 Para ejecutar esta aplicación, asegúrate de cumplir con los siguientes requisitos de sistema:  
-- Java: Debes tener instalado Java 22.
+- Java: Debes tener instalado el Java JRE 22.
 - CPU:  Se recomienda una CPU potente para obtener los resultados en menor tiempo. No obstante, también puedes utilizar una CPU menos potente, aunque los tiempos de procesamiento serán mayores.
 
 # Uso
