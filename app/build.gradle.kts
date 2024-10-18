@@ -15,6 +15,12 @@ dependencies {
 
     implementation("com.google.guava:guava:31.1-jre")
     implementation("org.jetbrains.kotlin:kotlin-stdlib:2.0.0")
+
+    //Dependencias de la web y las corutinas
+    implementation("org.jsoup:jsoup:1.14.3")
+
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.2")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-io:0.1.16")
 }
 
 application {
