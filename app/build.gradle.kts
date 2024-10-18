@@ -26,7 +26,7 @@ dependencies {
 
 //mainClass.set("org/example/AppKt")
 application {
-    mainClass.set("org/nocanohi/AppKt")
+    mainClass.set("org/wikiracing/AppKt")
 }
 
 // JVM Toolchain
@@ -40,7 +40,7 @@ java {
 tasks.jar {
     manifest {
         attributes(
-            "Main-Class" to "org/nocanohi/AppKt"
+            "Main-Class" to "org/wikiracing/AppKt"
         )
     }
 }
@@ -50,12 +50,13 @@ tasks.named<Test>("test") {
     useJUnitPlatform()
 }
 
+//"Main-Class" to "org/example/AppKt"
 tasks {
     named<com.github.jengelman.gradle.plugins.shadow.tasks.ShadowJar>("shadowJar") {
         archiveClassifier.set("")
         manifest {
             attributes(
-                "Main-Class" to "org/nocanohi/AppKt"
+                "Main-Class" to "org/wikiracing/AppKt"
             )
         }
     }
