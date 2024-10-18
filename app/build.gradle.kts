@@ -1,6 +1,7 @@
 plugins {
     id("org.jetbrains.kotlin.jvm") version "2.0.0"
     id("application")
+    id("com.github.johnrengelman.shadow") version "7.1.2"
 }
 
 repositories {
@@ -23,8 +24,9 @@ dependencies {
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-io:0.1.16")
 }
 
+//mainClass.set("org/example/AppKt")
 application {
-    mainClass.set("org/example/AppKt")
+    mainClass.set("org/nocanohi/AppKt")
 }
 
 // JVM Toolchain
@@ -34,10 +36,11 @@ java {
     }
 }
 
+//"Main-Class" to "org/example/AppKt"
 tasks.jar {
     manifest {
         attributes(
-            "Main-Class" to "org/example/AppKt"
+            "Main-Class" to "org/nocanohi/AppKt"
         )
     }
 }
@@ -45,4 +48,34 @@ tasks.jar {
 tasks.named<Test>("test") {
     // Use JUnit Platform for unit tests.
     useJUnitPlatform()
+}
+
+tasks {
+    named<com.github.jengelman.gradle.plugins.shadow.tasks.ShadowJar>("shadowJar") {
+        archiveClassifier.set("")
+        manifest {
+            attributes(
+                "Main-Class" to "org/nocanohi/AppKt"
+            )
+        }
+    }
+    build {
+        dependsOn(shadowJar)
+    }
+
+    distZip {
+        dependsOn(shadowJar)
+    }
+
+    distTar {
+        dependsOn(shadowJar)
+    }
+
+    startScripts {
+        dependsOn(shadowJar)
+    }
+
+    startShadowScripts {
+        dependsOn(jar)
+    }
 }
